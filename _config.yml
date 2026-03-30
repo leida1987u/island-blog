@@ -2,15 +2,16 @@
 # Docs: https://hexo.io/docs/configuration.html
 
 # Site
-title: 岛屿来信
-subtitle: 记录生活中的灵感碎片
-description: 一个温暖的社交社区，记录生活、分享故事
+title: 毅哥和他的小伙伴们
+subtitle: 岛屿来信 · 记录生活中的灵感碎片
+description: 毅哥和他的小伙伴们的温暖社区，记录生活、分享故事、一起成长
 keywords:
+  - 毅哥和他的小伙伴们
   - 岛屿来信
   - 社交
   - 生活记录
   - 个人博客
-author: 岛民
+author: 毅哥
 language: zh-CN
 timezone: Asia/Shanghai
 
