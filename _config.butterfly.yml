@@ -5,24 +5,23 @@
 menu:
   首页: / || fas fa-home
   成员: /members/ || fas fa-users
+  发现: javascript:void(0) || fas fa-compass
   热榜: /social/news/ || fas fa-fire
   音乐: /social/music/ || fas fa-music
-  每日图: /social/photo/ || fas fa-image
-
-# ---------- 子菜单 ----------
-# 更多功能在侧边栏或子菜单中
-# 相册: /social/album/
-# 大事记: /social/timeline/
-# 投票: /social/vote/
-# 食谱: /social/recipe/
-# 旅行: /social/travel/
-# 年度回顾: /social/review/
-# 留言板: /guestbook/
-# 关于: /about/
-
-  更多: javascript:void(0) || fas fa-ellipsis-h
-  归档: /archives/ || fas fa-archive
   关于: /about/ || fas fa-heart
+
+# 发现子菜单
+submenu:
+  发现:
+    每日一图: /social/photo/ || fas fa-image
+    岛屿相册: /social/album/ || fas fa-images
+    大事记: /social/timeline/ || fas fa-calendar
+    旅行足迹: /social/travel/ || fas fa-map-marked-alt
+    食谱分享: /social/recipe/ || fas fa-utensils
+    岛屿投票: /social/vote/ || fas fa-poll
+    年度回顾: /social/review/ || fas fa-star
+    留言板: /guestbook/ || fas fa-comment-dots
+    归档: /archives/ || fas fa-archive
 
 # ---------- 代码块 ----------
 highlight_theme: light
@@ -143,16 +142,6 @@ katex:
 lazyload:
   enable: true
   loading_img: /img/loading.gif
-
-# ---------- 子菜单 ----------
-submenu:
-  社交广场:
-    近况广场: /social/feed/
-    每日打卡: /social/checkin/
-  娱乐:
-    笔迹分析: /social/analysis/
-    今日歌曲: /social/song/
-    每日图片: /social/photo/
 
 # ---------- CDN ----------
 CDN:
