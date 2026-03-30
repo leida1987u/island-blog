@@ -1,12 +1,12 @@
 ---
 title: 岛屿成员
-date: 2026-03-31 01:00:00
+date: 2026-03-31 02:00:00
 type: page
 ---
 
 ## 🏝️ 岛屿成员
 
-我们来自同一个微信群，15个人，15个故事。
+我们来自同一个微信群，12个人，12个故事。
 
 <div class="members-grid" id="members-grid"></div>
 
@@ -23,30 +23,25 @@ type: page
 
 <script>
 var members = [
-  { id: 'yige', name: '毅哥', sign: '生命在于折腾', avatar: '/island-blog/images/avatars/yige.jpg' },
-  { id: 'member02', name: '成员02', sign: '一句话签名', avatar: '' },
-  { id: 'member03', name: '成员03', sign: '一句话签名', avatar: '' },
-  { id: 'member04', name: '成员04', sign: '一句话签名', avatar: '' },
-  { id: 'member05', name: '成员05', sign: '一句话签名', avatar: '' },
-  { id: 'member06', name: '成员06', sign: '一句话签名', avatar: '' },
-  { id: 'member07', name: '成员07', sign: '一句话签名', avatar: '' },
-  { id: 'member08', name: '成员08', sign: '一句话签名', avatar: '' },
-  { id: 'member09', name: '成员09', sign: '一句话签名', avatar: '' },
-  { id: 'member10', name: '成员10', sign: '一句话签名', avatar: '' },
-  { id: 'member11', name: '成员11', sign: '一句话签名', avatar: '' },
-  { id: 'member12', name: '成员12', sign: '一句话签名', avatar: '' },
-  { id: 'member13', name: '成员13', sign: '一句话签名', avatar: '' },
-  { id: 'member14', name: '成员14', sign: '一句话签名', avatar: '' },
-  { id: 'member15', name: '成员15', sign: '一句话签名', avatar: '' }
+  { id: 'piaoye', name: '痞爷', sign: '盼哥', avatar: '/island-blog/images/痞爷.jpg' },
+  { id: 'chuanfu', name: '川赴', sign: '机车爱好者', avatar: '/island-blog/images/川赴.jpg' },
+  { id: 'dida', name: '滴答', sign: '钓鱼佬', avatar: '/island-blog/images/滴答.jpg' },
+  { id: 'xiangdi', name: '℡', sign: '小黄毛祥弟', avatar: '/island-blog/images/℡.jpg' },
+  { id: 'huanggou', name: '🌏', sign: '黄🐶', avatar: '/island-blog/images/🌏.jpg' },
+  { id: 'shityanliang', name: '世态炎凉', sign: '云南', avatar: '/island-blog/images/世态炎凉.jpg' },
+  { id: 'liaoyuanye', name: '燎原一叶', sign: '天生我才必有用，千金散尽还复来。', avatar: '/island-blog/images/燎原一叶.jpg' },
+  { id: 'leishao', name: '雷少', sign: '兄弟们今晚来干酒！', avatar: '/island-blog/images/雷少.jpg' },
+  { id: 'apeng', name: '阿鹏', sign: '贵州第三深情', avatar: '/island-blog/images/阿鹏.jpg' },
+  { id: 'cxa', name: 'cxa', sign: '哈哈哈四眼仔', avatar: '/island-blog/images/cxa.jpg' },
+  { id: 'feixiaolei', name: '会飞的小雷', sign: '少妇杀手喜欢开坦克', avatar: '/island-blog/images/会飞的小雷.jpg' },
+  { id: 'fengyun', name: 'FENGYUN', sign: '年轻有为', avatar: '/island-blog/images/FENGYUN.jpg' },
 ];
-
 var defaultAvatar = 'https://api.dicebear.com/7.x/initials/svg?backgroundColor=ff6b6b,ffd93d,6bcb77,4d96ff,9b59b6&seed=';
-
 var grid = document.getElementById('members-grid');
 members.forEach(function(m) {
   var avatar = m.avatar || defaultAvatar + encodeURIComponent(m.name);
   grid.innerHTML += '<a class="member-card" href="/island-blog/members/' + m.id + '/">' +
-    '<img class="member-avatar" src="' + avatar + '" alt="' + m.name + '" onerror="this.src=\'' + defaultAvatar + encodeURIComponent(m.name) + '\'">' +
+    '<img class="member-avatar" src="' + avatar + '" alt="' + m.name + '" onerror="this.src='' + defaultAvatar + encodeURIComponent(m.name) + ''">' +
     '<div class="member-name">' + m.name + '</div>' +
     '<div class="member-sign">' + m.sign + '</div>' +
     '</a>';
