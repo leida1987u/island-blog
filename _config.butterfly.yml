@@ -25,7 +25,7 @@ submenu:
 
 # ---------- 头像 ----------
 avatar:
-  img: /island-blog/images/燎原一叶.jpg
+  img: /images/燎原一叶.jpg
   effect: false
 
 # ---------- 代码块 ----------
