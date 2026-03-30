@@ -4,12 +4,11 @@
 # ---------- 导航菜单 ----------
 menu:
   首页: / || fas fa-home
-  归档: /archives/ || fas fa-archive
-  分类: /categories/ || fas fa-folder-open
-  标签: /tags/ || fas fa-tags
+  成员: /members/ || fas fa-users
   热榜: /social/news/ || fas fa-fire
   音乐: /social/music/ || fas fa-music
   每日图: /social/photo/ || fas fa-image
+  归档: /archives/ || fas fa-archive
   留言板: /guestbook/ || fas fa-comment-dots
   关于: /about/ || fas fa-heart
 
