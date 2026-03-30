@@ -23,6 +23,9 @@ submenu:
     留言板: /guestbook/ || fas fa-comment-dots
     归档: /archives/ || fas fa-archive
 
+# ---------- Favicon / Site Icon ----------
+site_icon: /island-blog/images/燎原一叶.jpg
+
 # ---------- 代码块 ----------
 highlight_theme: light
 highlight_copy: true
@@ -44,8 +47,12 @@ aside:
   position: right
   card_author:
     enable: true
-    avatar: /island-blog/images/燎原一叶.jpg
     description: 记录生活中的灵感碎片 🏝️
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/leida1987u
   card_announcement:
     enable: true
     content: 欢迎来到岛屿来信！这里是一个温暖的社区。
