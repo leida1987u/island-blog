@@ -130,3 +130,52 @@
   .cal-grid { padding: 12px; gap: 2px; }
   .cal-day { padding: 8px 2px; font-size: 0.75em; }
 }
+
+/* === 暗色模式适配 === */
+[data-theme='dark'] .home-feature-card {
+  background: #1e1e1e;
+  border-color: #333333;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+[data-theme='dark'] .home-feature-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+[data-theme='dark'] .home-feature-card h3 {
+  color: #e0e0e0;
+}
+[data-theme='dark'] .home-feature-card p {
+  color: #999999;
+}
+[data-theme='dark'] .cal-grid {
+  background: #1e1e1e;
+  border-color: #333333;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+[data-theme='dark'] .cal-header {
+  color: #888888;
+}
+[data-theme='dark'] .cal-day {
+  color: #cccccc;
+}
+[data-theme='dark'] .cal-day:hover {
+  background: #2a2a2a;
+}
+[data-theme='dark'] .island-calendar h2 {
+  color: #e0e0e0;
+}
+[data-theme='dark'] #postModal .pm-dialog {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+[data-theme='dark'] #postModal #postInput {
+  background: #2a2a2a;
+  border-color: #444444;
+  color: #e0e0e0;
+}
+[data-theme='dark'] .mobile-bottom-nav {
+  background: #1e1e1e;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+[data-theme='dark'] .nb-item {
+  color: #999999;
+}

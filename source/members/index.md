@@ -40,7 +40,7 @@ var defaultAvatar = 'https://api.dicebear.com/7.x/initials/svg?backgroundColor=f
 var grid = document.getElementById('members-grid');
 members.forEach(function(m) {
   var avatar = m.avatar || defaultAvatar + encodeURIComponent(m.name);
-  grid.innerHTML += '<a class="member-card" href="/island-blog/members/' + m.id + '/">' +
+  grid.innerHTML += '<a class="member-card" href="/island-blog/members/' + m.id + '.html">' +
     '<img class="member-avatar" src="' + avatar + '" alt="' + m.name + '" onerror="this.src='' + defaultAvatar + encodeURIComponent(m.name) + ''">' +
     '<div class="member-name">' + m.name + '</div>' +
     '<div class="member-sign">' + m.sign + '</div>' +
