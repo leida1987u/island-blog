@@ -8,8 +8,20 @@ menu:
   热榜: /social/news/ || fas fa-fire
   音乐: /social/music/ || fas fa-music
   每日图: /social/photo/ || fas fa-image
+
+# ---------- 子菜单 ----------
+# 更多功能在侧边栏或子菜单中
+# 相册: /social/album/
+# 大事记: /social/timeline/
+# 投票: /social/vote/
+# 食谱: /social/recipe/
+# 旅行: /social/travel/
+# 年度回顾: /social/review/
+# 留言板: /guestbook/
+# 关于: /about/
+
+  更多: javascript:void(0) || fas fa-ellipsis-h
   归档: /archives/ || fas fa-archive
-  留言板: /guestbook/ || fas fa-comment-dots
   关于: /about/ || fas fa-heart
 
 # ---------- 代码块 ----------
