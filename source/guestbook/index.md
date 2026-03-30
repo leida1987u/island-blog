@@ -10,23 +10,14 @@ type: page
 
 ---
 
-### 使用方法
-留言板基于 GitHub Discussions，需要 GitHub 账号登录后才能留言。
-
-**配置步骤：**
-1. 打开 https://giscus.app/zh-CN
-2. 输入仓库地址：`leida1987u/island-blog`
-3. 开启 Discussions 功能（仓库设置 → Features → Discussions ✅）
-4. 选择一个 Discussion 分类（如 "General"）
-5. 复制生成的 `data-repo-id` 和 `data-category-id`
-6. 告诉我，我帮你配置好
-
----
-
-### 留言区（配置后自动显示）
-
-<div style="text-align:center;padding:60px;color:#999">
-  <p style="font-size:3em">🏗️</p>
-  <p>留言板正在配置中...</p>
-  <p>完成 giscus 配置后，这里将自动显示评论框</p>
+<div style="text-align:center;padding:40px 20px;">
+  <p style="font-size:2.5em;margin-bottom:16px;">🏖️</p>
+  <p style="font-size:1.1em;color:#666;line-height:1.8;">
+    留言板正在筹备中...<br>
+    未来你可以在这里写信、留言、和岛友们互动<br>
+    敬请期待！
+  </p>
+  <p style="font-size:0.85em;color:#aaa;margin-top:20px;">
+    💡 如果你也想参与开发，欢迎联系毅哥
+  </p>
 </div>

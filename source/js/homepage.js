@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', function () {
         '  <a href="/island-blog/social/discover/"><i class="fas fa-compass"></i><span>\u53D1\u73B0</span></a>',
         '  <a href="/island-blog/members/"><i class="fas fa-users"></i><span>\u6210\u5458</span></a>',
         '  <a href="/island-blog/social/music/"><i class="fas fa-music"></i><span>\u97F3\u4E50</span></a>',
-        '  <a href="/island-blog/guestbook/"><i class="fas fa-comment-dots"></i><span>\u7559\u8A00</span></a>',
-        '  <a href="/island-blog/social/photo/"><i class="fas fa-image"></i><span>\u6BCF\u65E5\u4E00\u56FE</span></a>',
-        '  <a href="/island-blog/social/album/"><i class="fas fa-images"></i><span>\u76F8\u518C</span></a>',
+        '  <a href="/island-blog/social/handwriting/"><i class="fas fa-pen-nib"></i><span>\u7B14\u8FF9</span></a>',
+        '  <a href="/island-blog/social/photo/"><i class="fas fa-image"></i><span>\u6BCF\u65E5\u56FE</span></a>',
+        '  <a href="/island-blog/social/news/"><i class="fas fa-fire"></i><span>\u70ED\u699C</span></a>',
         '  <a href="/island-blog/social/vote/"><i class="fas fa-poll"></i><span>\u6295\u7968</span></a>',
         '  <a href="/island-blog/about/"><i class="fas fa-heart"></i><span>\u5173\u4E8E</span></a>',
         '</div>'
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var featuresDiv = document.createElement('div');
       featuresDiv.className = 'home-features';
       var cards = [
-        { icon: '\uD83D\uDCEC', title: '\u65F6\u5149\u4FE1\u7BB1', desc: '\u5199\u4E00\u5C01\u4FE1\u7ED9\u672A\u6765\u7684\u81EA\u5DF1\u6216\u670B\u53CB\uFF0C\u8BA9\u65F6\u5149\u4F20\u9012\u6E29\u6696', link: '/island-blog/guestbook/', linkText: '\u5199\u4E00\u5C01\u4FE1 \u2192' },
+        { icon: '\u270D\uFE0F', title: '\u7B14\u8FF9\u5206\u6790', desc: '\u4E0A\u4F20\u7B14\u8FF9\u56FE\u7247\uFF0C\u4E00\u952E\u5206\u6790\u4E66\u5199\u8005\u7684\u6027\u683C\u7279\u5F81', link: '/island-blog/social/handwriting/', linkText: '\u53BB\u5206\u6790 \u2192' },
         { icon: '\uD83C\uDFB5', title: '\u6BCF\u65E5\u6B4C\u66F2', desc: '\u6BCF\u5929\u63A8\u8350\u4E00\u9996\u597D\u6B4C\uFF0C\u7528\u97F3\u4E50\u6CBB\u6108\u5FC3\u7075', link: '/island-blog/social/music/', linkText: '\u53BB\u542C\u6B4C \u2192' },
         { icon: '\uD83D\uDCF8', title: '\u6BCF\u65E5\u4E00\u56FE', desc: '\u4E00\u5F20\u56FE\uFF0C\u4E00\u4E2A\u6545\u4E8B\uFF0C\u8BB0\u5F55\u751F\u6D3B\u4E2D\u7684\u7F8E\u597D\u77AC\u95F4', link: '/island-blog/social/photo/', linkText: '\u770B\u4ECA\u65E5\u7F8E\u56FE \u2192' },
         { icon: '\uD83D\uDDF3\uFE0F', title: '\u5C8B\u5C7F\u6295\u7968', desc: '\u53C2\u4E0E\u6709\u8DA3\u7684\u8BDD\u9898\u6295\u7968\uFF0C\u770B\u770B\u5927\u5BB6\u600E\u4E48\u60F3', link: '/island-blog/social/vote/', linkText: '\u53BB\u6295\u7968 \u2192' },
@@ -176,9 +176,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(calDiv);
   } catch (e) { console.log('calendar error:', e); }
 
-  // --- 音乐播放器 ---
+  // --- 音乐播放器（仅在音乐页显示，不在首页碍事）---
   try {
-    if (typeof APlayer !== 'undefined') {
+    var isMusicPage = window.location.pathname.indexOf('/social/music/') >= 0;
+    if (typeof APlayer !== 'undefined' && isMusicPage) {
       var apDiv = document.createElement('div');
       apDiv.id = 'island-aplayer';
       apDiv.className = 'island-aplayer';

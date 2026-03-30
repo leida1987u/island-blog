@@ -19,7 +19,18 @@
 /* === 首页自定义样式 === */
 #page-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  position: relative;
 }
+#page-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+#page-header > * { position: relative; z-index: 1; }
 
 .home-hero {
   text-align: center; padding: 40px 20px 20px;
