@@ -1,0 +1,102 @@
+# Hexo Configuration
+# Docs: https://hexo.io/docs/configuration.html
+
+# Site
+title: 岛屿来信
+subtitle: 记录生活中的灵感碎片
+description: 一个温暖的社交社区，记录生活、分享故事
+keywords:
+  - 岛屿来信
+  - 社交
+  - 生活记录
+  - 个人博客
+author: 岛民
+language: zh-CN
+timezone: Asia/Shanghai
+
+# URL
+url: https://leida1987u.github.io/island-blog
+root: /island-blog/
+permalink: posts/:abbrlink/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+# Home page setting
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: 'mtime'
+
+# Pagination
+per_page: 10
+pagination_dir: page
+
+# Search
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
+# Abbrlink
+abbrlink:
+  alg: crc32
+  rep: hex
+
+# Extensions
+theme: butterfly
+
+# Plugins
+plugins:
+  - hexo-generator-search
+  - hexo-renderer-pug
+  - hexo-renderer-stylus
+
+# Deployment
+deploy:
+  type: git
+  repo: https://github.com/leida1987u/island-blog.git
+  branch: gh-pages

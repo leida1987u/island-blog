@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>岛屿来信 v2.0 技术升级 🚀</title>
+      <link href="/island-blog/posts/a7a94199/"/>
+      <url>/island-blog/posts/a7a94199/</url>
+      
+        <content type="html"><![CDATA[<h2 id="主要变化"><a href="#主要变化" class="headerlink" title="主要变化"></a>主要变化</h2><ul><li>使用 Hexo + Butterfly 框架</li><li>支持暗色模式</li><li>新增评论系统</li><li>更好的 SEO 支持</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> GitHub Pages </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/island-blog/posts/4a17b156/"/>
+      <url>/island-blog/posts/4a17b156/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>欢迎来到岛屿来信 🏝️</title>
+      <link href="/island-blog/posts/ce50c0/"/>
+      <url>/island-blog/posts/ce50c0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="欢迎登岛！"><a href="#欢迎登岛！" class="headerlink" title="欢迎登岛！"></a>欢迎登岛！</h2><p>岛屿来信是一个温暖的社交社区。在这里你可以分享日常、每日打卡、笔迹分析、推荐歌曲、每日一图、投票问答。</p><p>让我们一起记录生活中的灵感碎片！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 公告 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 欢迎 </tag>
+            
+            <tag> 岛屿来信 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

@@ -1,0 +1,170 @@
+# Butterfly Theme Configuration
+# Docs: https://butterfly.js.org/
+
+# ---------- 导航菜单 ----------
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  留言板: /guestbook/ || fas fa-comment-dots
+  关于: /about/ || fas fa-heart
+
+# ---------- 代码块 ----------
+highlight_theme: light
+highlight_copy: true
+highlight_lang: true
+code_word_wrap: true
+
+# ---------- 社交链接 ----------
+social:
+  fab fa-github: https://github.com/leida1987u || GitHub
+
+# ---------- 首页 ----------
+index_img:
+default_cover:
+  - /img/default_cover.png
+
+# ---------- 侧边栏 ----------
+aside:
+  enable: true
+  position: right
+  card_author:
+    enable: true
+    description: 记录生活中的灵感碎片 🏝️
+  card_announcement:
+    enable: true
+    content: 欢迎来到岛屿来信！这里是一个温暖的社区。
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+  card_categories:
+    enable: true
+  card_tags:
+    enable: true
+    limit: 40
+  card_post_series:
+    enable: true
+
+# ---------- 文章 ----------
+post_meta:
+  date_type: both
+  categories: true
+  tags: true
+
+toc:
+  enable: true
+  number: true
+
+post_copyright:
+  enable: true
+  decode: false
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# ---------- 评论系统 ----------
+comments:
+  use: giscus
+  text: true
+  lazyload: false
+
+# Giscus 配置 (需要你到 https://giscus.app 配置)
+giscus:
+  repo:
+  repo_id:
+  category:
+  category_id:
+  theme_light: light
+  theme_dark: dark
+  mapping: pathname
+  reactions_enabled: true
+  emit_metadata: false
+
+# ---------- 搜索 ----------
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+  unescape: false
+  preload: true
+
+# ---------- PWA ----------
+pwa:
+  enable: false
+
+# ---------- 分析 ----------
+wordcount:
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# ---------- 夜间模式 ----------
+darkmode:
+  enable: true
+  button: true
+
+# ---------- 字体 ----------
+font:
+  global_font_size:
+  code_font_size:
+  font_family:
+  code_font_family:
+
+# ---------- 首页封面配置 ----------
+index_site_info_top:
+index_top_img_height: 100vh
+
+# ---------- 打赏 ----------
+reward:
+  enable: false
+
+# ---------- Math ----------
+mathjax:
+  enable: false
+katex:
+  enable: false
+
+# ---------- 图片懒加载 ----------
+lazyload:
+  enable: true
+  loading_img: /img/loading.gif
+
+# ---------- 子菜单 ----------
+submenu:
+  社交广场:
+    近况广场: /social/feed/
+    每日打卡: /social/checkin/
+  娱乐:
+    笔迹分析: /social/analysis/
+    今日歌曲: /social/song/
+    每日图片: /social/photo/
+
+# ---------- CDN ----------
+CDN:
+  css:
+    fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
+  js:
+
+# ---------- Footer ----------
+footer:
+  owner:
+    enable: true
+    since: 2026
+  custom_text: 岛屿来信 · 一起记录生活
+  copyright:
+    enable: true
+
+# ---------- 分页 ----------
+pagination:
+  enable: true
+  per_page: 10
+  order_by: -date
+
+# ---------- 首页文章封面 ----------
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  position: both
+  default_cover:
