@@ -196,4 +196,3 @@ inject:
     - <link rel="stylesheet" href="/island-blog/css/custom.css">
   bottom:
     - <script src="/island-blog/js/homepage.js"></script>
-    - <script src="/island-blog/js/homepage.js"></script>

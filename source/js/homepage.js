@@ -1,6 +1,14 @@
 /* 岛屿来信 - 首页自定义脚本 */
 (function() {
   function init() {
+    // Debug marker - if this shows, init() is running
+    if (!document.getElementById('oc-init-marker')) {
+      var marker = document.createElement('div');
+      marker.id = 'oc-init-marker';
+      marker.style.cssText = 'position:fixed;top:0;right:0;background:red;color:#fff;padding:2px 6px;font-size:10px;z-index:9999;';
+      marker.textContent = 'JS OK';
+      document.body.appendChild(marker);
+    }
 
   /* ====== 底部导航 + 弹窗样式（优先加载） ====== */
   try {
