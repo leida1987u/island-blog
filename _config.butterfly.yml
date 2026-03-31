@@ -276,3 +276,84 @@ inject:
         for(i=1;i<=dm;i++){var c=document.createElement('div');c.className='oc-cal-d'+(i===d?' today':'');c.textContent=i;g.appendChild(c)}
       })();
       </script>
+    - |
+      <script>
+      /* 成员页脚本 */
+      (function(){
+        if(location.pathname.indexOf('/members')<0)return;
+        var members=[
+          {id:'piaoye',name:'痞爷',sign:'盼哥',avatar:'/island-blog/images/痞爷.jpg'},
+          {id:'chuanfu',name:'川赴',sign:'机车爱好者',avatar:'/island-blog/images/川赴.jpg'},
+          {id:'dida',name:'滴答',sign:'钓鱼佬',avatar:'/island-blog/images/滴答.jpg'},
+          {id:'xiangdi',name:'℡',sign:'小黄毛祥弟',avatar:'/island-blog/images/℡.jpg'},
+          {id:'huanggou',name:'🌏',sign:'黄🐶',avatar:'/island-blog/images/🌏.jpg'},
+          {id:'shityanliang',name:'世态炎凉',sign:'云南',avatar:'/island-blog/images/世态炎凉.jpg'},
+          {id:'liaoyuanye',name:'燎原一叶',sign:'天生我才必有用，千金散尽还复来。',avatar:'/island-blog/images/燎原一叶.jpg'},
+          {id:'leishao',name:'雷少',sign:'兄弟们今晚来干酒！',avatar:'/island-blog/images/雷少.jpg'},
+          {id:'apeng',name:'阿鹏',sign:'贵州第三深情',avatar:'/island-blog/images/阿鹏.jpg'},
+          {id:'cxa',name:'cxa',sign:'哈哈哈四眼仔',avatar:'/island-blog/images/cxa.jpg'},
+          {id:'feixiaolei',name:'会飞的小雷',sign:'少妇杀手喜欢开坦克',avatar:'/island-blog/images/会飞的小雷.jpg'},
+          {id:'fengyun',name:'FENGYUN',sign:'年轻有为',avatar:'/island-blog/images/FENGYUN.jpg'}
+        ];
+        var def='https://api.dicebear.com/7.x/initials/svg?backgroundColor=ff6b6b,ffd93d,6bcb77,4d96ff,9b59b6&seed=';
+        var g=document.getElementById('members-grid');
+        if(!g)return;
+        members.forEach(function(m){
+          var av=m.avatar||def+encodeURIComponent(m.name);
+          g.innerHTML+='<a class="member-card" href="/island-blog/members/'+m.id+'.html"><img class="member-avatar" src="'+av+'" alt="'+m.name+'" onerror="this.src=\''+def+encodeURIComponent(m.name)+'\'"><div class="member-name">'+m.name+'</div><div class="member-sign">'+m.sign+'</div></a>';
+        });
+      })();
+      </script>
+    - |
+      <script>
+      /* 笔迹分析页脚本 */
+      (function(){
+        if(location.pathname.indexOf('/handwriting')<0)return;
+        var ua=document.getElementById('uploadArea'),fi=document.getElementById('fileInput');
+        var ph=document.getElementById('uploadPlaceholder'),pv=document.getElementById('preview');
+        var pi=document.getElementById('previewImg'),rb=document.getElementById('reuploadBtn');
+        var ab=document.getElementById('analyzeBtn'),hr=document.getElementById('hwResult');
+        var rc=document.getElementById('resultContent');
+        if(!ua||!fi)return;
+        ua.addEventListener('click',function(e){if(e.target===rb||e.target.parentNode===rb)return;fi.click()});
+        rb.addEventListener('click',function(e){e.stopPropagation();fi.click()});
+        fi.addEventListener('change',function(){var f=this.files[0];if(!f)return;var r=new FileReader();r.onload=function(e){pi.src=e.target.result;ph.style.display='none';pv.style.display='block'};r.readAsDataURL(f)});
+        document.querySelectorAll('.hw-options').forEach(function(g){g.querySelectorAll('.hw-opt').forEach(function(b){b.addEventListener('click',function(){g.querySelectorAll('.hw-opt').forEach(function(x){x.classList.remove('active')});this.classList.add('active')})})});
+        ab.addEventListener('click',function(){
+          var data={};document.querySelectorAll('.hw-options').forEach(function(g){var k=g.dataset.key;if(k)data[k]=g.querySelector('.hw-opt.active')?g.querySelector('.hw-opt.active').dataset.val:''});
+          var res=analyze(data),html='';
+          res.forEach(function(d){html+='<div class="hw-dim"><div class="hw-dim-title">'+d.name+'</div><div class="hw-dim-positive">✅ '+d.pos+'</div><div class="hw-dim-risk">⚠️ '+d.risk+'</div>'+(d.note?'<div class="hw-dim-note">💡 '+d.note+'</div>':'')+'</div>'});
+          html+='<div class="hw-confidence">本分析综合了 '+res.length+' 个维度的特征，置信度：中等。</div>';
+          rc.innerHTML=html;hr.style.display='block';hr.scrollIntoView({behavior:'smooth'});
+        });
+        function analyze(d){var r=[];
+          if(d.size==='small')r.push({name:'🧩 思维方式',pos:'谨慎内敛，注重细节',risk:'可能过于拘谨',note:'小字反映精力更多放在个人成长上'});
+          else if(d.size==='large')r.push({name:'🧩 思维方式',pos:'心胸开阔，外向自信',risk:'可能不够细致',note:'大字反映需要更多空间来表达自我'});
+          else r.push({name:'🧩 思维方式',pos:'思维均衡，既有大局观也关注细节',risk:'特征不明显',note:'适中字体反映较平衡的心理状态'});
+          if(d.tilt==='left')r.push({name:'🛡️ 城府与自我保护',pos:'自我保护意识强，善于反思',risk:'可能偏回避型',note:'左倾反映偏依恋过去'});
+          else if(d.tilt==='right')r.push({name:'🛡️ 城府与自我保护',pos:'面对现实有勇气，坦诚',risk:'可能情绪化',note:'适度右倾(~5°)是理想状态'});
+          else if(d.tilt==='mixed')r.push({name:'🛡️ 城府与自我保护',pos:'灵活应变',risk:'情绪可能不够稳定',note:'方向不一致反映情绪波动'});
+          else r.push({name:'🛡️ 城府与自我保护',pos:'冷静理智，有主见',risk:'可能过于理性',note:'端正反映较强的自律自控'});
+          if(d.charSpace==='tight')r.push({name:'👥 人际距离感',pos:'亲近感强',risk:'可能缺乏边界感',note:'字间距小反映心理距离很近'});
+          else if(d.charSpace==='wide')r.push({name:'👥 人际距离感',pos:'有边界感',risk:'可能防卫心较重',note:'字间距大反映希望保持距离'});
+          else r.push({name:'👥 人际距离感',pos:'思维清晰有条理',risk:'特征均衡',note:'适中字间距反映良好适应性'});
+          if(d.hStroke==='up')r.push({name:'💪 意志力',pos:'积极主动，有目标感',risk:'可能过于执着',note:'上扬横画反映向上动力'});
+          else if(d.hStroke==='down')r.push({name:'💪 意志力',pos:'随和不强势',risk:'可能缺乏热情',note:'下滑需结合笔压判断'});
+          else r.push({name:'💪 意志力',pos:'稳重踏实',risk:'缺少爆发力',note:'平直反映理性稳健'});
+          if(d.speed==='fast')r.push({name:'⚡ 做事风格',pos:'思维敏捷，效率高',risk:'可能不够仔细',note:'快速书写反映行动导向'});
+          else if(d.speed==='slow')r.push({name:'⚡ 做事风格',pos:'认真仔细，稳扎稳打',risk:'可能决策偏慢',note:'慢速反映谨慎心理'});
+          else r.push({name:'⚡ 做事风格',pos:'张弛有度',risk:'特征均衡',note:'中等速度反映平衡节奏'});
+          if(d.pressure==='heavy')r.push({name:'🔥 个人气质',pos:'意志坚定，有力度',risk:'可能固执',note:'重笔压反映强自我意识'});
+          else if(d.pressure==='light')r.push({name:'🔥 个人气质',pos:'温和细腻',risk:'可能不够果断',note:'轻笔压反映柔和气质'});
+          else r.push({name:'🔥 个人气质',pos:'刚柔并济',risk:'特征均衡',note:'适中笔压反映灵活调节'});
+          if(d.lineSpace==='wide')r.push({name:'🌐 社会适应',pos:'注重个人边界',risk:'可能有疏离感',note:'大行间距反映群体距离感'});
+          else if(d.lineSpace==='tight')r.push({name:'🌐 社会适应',pos:'愿意融入群体',risk:'可能缺乏个人空间',note:'小行间距反映归属需求'});
+          else r.push({name:'🌐 社会适应',pos:'能融入也能独立',risk:'特征均衡',note:'适中行间距反映平衡能力'});
+          if(d.layout==='left')r.push({name:'🧭 对未来态度',pos:'脚踏实地',risk:'可能偏保守',note:'偏左反映更愿待在安全区'});
+          else if(d.layout==='right')r.push({name:'🧭 对未来态度',pos:'面向未来',risk:'可能急于求成',note:'偏右反映对未来的推进'});
+          else if(d.layout==='full')r.push({name:'🧭 对未来态度',pos:'充分利用资源',risk:'可能不够放松',note:'写满反映秩序感和控制感'});
+          else r.push({name:'🧭 对未来态度',pos:'注重平衡',risk:'特征均衡',note:'居中反映稳健心理'});
+          return r;
+        }
+      })();
+      </script>
