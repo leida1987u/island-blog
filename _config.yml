@@ -90,6 +90,11 @@ abbrlink:
 # Extensions
 theme: butterfly
 
+# Marked renderer - 允许HTML标签（style/script）
+marked:
+  sanitize: false
+  headerIds: true
+
 # Plugins
 plugins:
   - hexo-generator-search

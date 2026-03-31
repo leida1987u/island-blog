@@ -1,0 +1,192 @@
+/* === 岛屿来信 - 全局自定义样式 === */
+
+/* 下拉菜单 */
+.menu-list { position: relative; }
+.menu-list .menus-item:hover .menus-item-child,
+.menu-list .menus-item.opened .menus-item-child { display: block; }
+.menus-item-child {
+  display: none; position: absolute; left: 0; top: 100%;
+  background: #ffffff; border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  min-width: 120px; z-index: 100; padding: 5px 0;
+}
+.menus-item-child a {
+  display: block; padding: 5px 15px; color: #333333;
+  text-decoration: none; font-size: 0.9em;
+}
+.menus-item-child a:hover { color: #ff6b6b; }
+
+/* === 首页自定义样式 === */
+#page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  position: relative;
+}
+#page-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+#page-header > * { position: relative; z-index: 1; }
+
+.home-hero {
+  text-align: center; padding: 40px 20px 20px;
+  position: relative; z-index: 10;
+}
+.home-hero .hero-avatar {
+  width: 120px; height: 120px; border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.8);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  margin: 0 auto 16px; display: block; object-fit: cover;
+}
+.home-hero .hero-title {
+  font-size: 1.8em; font-weight: 700; color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3); margin: 0 0 8px;
+}
+.home-hero .hero-subtitle {
+  font-size: 1em; color: rgba(255,255,255,0.85);
+  text-shadow: 0 1px 5px rgba(0,0,0,0.2); margin: 0 0 24px;
+}
+
+.home-quick-nav {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px; max-width: 500px; margin: 0 auto; padding: 0 20px;
+}
+.home-quick-nav a {
+  display: flex; flex-direction: column; align-items: center;
+  text-decoration: none; color: #ffffff; padding: 12px 8px;
+  border-radius: 16px; background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s;
+}
+.home-quick-nav a:hover {
+  background: rgba(255,255,255,0.25); transform: translateY(-2px);
+}
+.home-quick-nav a i { font-size: 1.5em; margin-bottom: 6px; }
+.home-quick-nav a span { font-size: 0.75em; }
+
+@media (max-width: 480px) {
+  .home-quick-nav { grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 0 12px; }
+  .home-hero .hero-avatar { width: 90px; height: 90px; }
+  .home-hero .hero-title { font-size: 1.4em; }
+}
+
+/* === 首页功能卡片 === */
+.home-features {
+  max-width: 900px; margin: 20px auto; padding: 0 20px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;
+}
+.home-feature-card {
+  background: #ffffff; border-radius: 16px; padding: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0; transition: all 0.3s;
+}
+.home-feature-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-3px);
+}
+.home-feature-card .card-icon { font-size: 2em; margin-bottom: 10px; }
+.home-feature-card h3 { margin: 0 0 6px; font-size: 1.1em; color: #333333; }
+.home-feature-card p { margin: 0; color: #888888; font-size: 0.85em; line-height: 1.5; }
+.home-feature-card .card-link {
+  display: inline-block; margin-top: 12px; color: #ff6b6b;
+  font-size: 0.85em; text-decoration: none; font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .home-features { grid-template-columns: 1fr; }
+}
+
+/* === 音乐播放器 === */
+.island-aplayer {
+  position: fixed; bottom: 70px; right: 20px; z-index: 999;
+  border-radius: 12px; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-width: 330px;
+}
+@media (min-width: 769px) { .island-aplayer { bottom: 20px; } }
+@media (max-width: 480px) {
+  .island-aplayer { right: 10px; bottom: 70px; max-width: 280px; }
+}
+
+/* === 日历 === */
+.island-calendar {
+  max-width: 900px; margin: 30px auto; padding: 0 20px 100px;
+}
+.island-calendar h2 {
+  text-align: center; color: #333333; margin-bottom: 20px; font-size: 1.3em;
+}
+.cal-grid {
+  display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px;
+  background: #ffffff; border-radius: 16px; padding: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06); border: 1px solid #f0f0f0;
+}
+.cal-header {
+  font-weight: 700; text-align: center; padding: 8px 4px;
+  color: #999999; font-size: 0.8em;
+}
+.cal-day {
+  text-align: center; padding: 10px 4px; border-radius: 10px;
+  font-size: 0.85em; color: #555555; transition: all 0.2s; cursor: default;
+}
+.cal-day:hover { background: #fff0f0; }
+.cal-day.today {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: #ffffff; font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255,107,107,0.3);
+}
+.cal-day.empty { visibility: hidden; }
+@media (max-width: 480px) {
+  .cal-grid { padding: 12px; gap: 2px; }
+  .cal-day { padding: 8px 2px; font-size: 0.75em; }
+}
+
+/* === 暗色模式适配 === */
+[data-theme='dark'] .home-feature-card {
+  background: #1e1e1e;
+  border-color: #333333;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+[data-theme='dark'] .home-feature-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+[data-theme='dark'] .home-feature-card h3 {
+  color: #e0e0e0;
+}
+[data-theme='dark'] .home-feature-card p {
+  color: #999999;
+}
+[data-theme='dark'] .cal-grid {
+  background: #1e1e1e;
+  border-color: #333333;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+[data-theme='dark'] .cal-header {
+  color: #888888;
+}
+[data-theme='dark'] .cal-day {
+  color: #cccccc;
+}
+[data-theme='dark'] .cal-day:hover {
+  background: #2a2a2a;
+}
+[data-theme='dark'] .island-calendar h2 {
+  color: #e0e0e0;
+}
+[data-theme='dark'] #postModal .pm-dialog {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+[data-theme='dark'] #postModal #postInput {
+  background: #2a2a2a;
+  border-color: #444444;
+  color: #e0e0e0;
+}
+[data-theme='dark'] .mobile-bottom-nav {
+  background: #1e1e1e;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+[data-theme='dark'] .nb-item {
+  color: #999999;
+}
