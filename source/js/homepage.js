@@ -1,5 +1,6 @@
 /* 岛屿来信 - 首页自定义脚本 */
-document.addEventListener('DOMContentLoaded', function () {
+(function() {
+  function init() {
 
   /* ====== 底部导航 + 弹窗样式（优先加载） ====== */
   try {
@@ -211,4 +212,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } catch (e) { console.log('APlayer init error:', e); }
 
-});
+  }
+  init();
+  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('pjax:complete', init);
+})();
