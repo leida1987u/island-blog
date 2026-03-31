@@ -196,3 +196,83 @@ inject:
     - <link rel="stylesheet" href="/island-blog/css/custom.css">
   bottom:
     - <script src="/island-blog/js/homepage.js"></script>
+    - |
+      <style>
+      .oc-home-hero{display:none;flex-direction:column;align-items:center;text-align:center;padding:30px 20px 10px}
+      .oc-hero-avatar{width:80px;height:80px;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 15px rgba(0,0,0,.15);margin-bottom:12px;object-fit:cover}
+      .oc-hero-title{font-size:1.5em;color:inherit;margin:8px 0 4px}
+      .oc-hero-subtitle{color:#999;font-size:.9em;margin-bottom:16px}
+      .oc-quick-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:100%;max-width:400px;margin:0 auto 16px}
+      .oc-quick-nav a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;font-size:.75em;gap:4px;padding:8px 0}
+      .oc-quick-nav a i{font-size:1.6em;color:#667eea}
+      .oc-features{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin:16px 0}
+      .oc-fcard{background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s}
+      .oc-fcard:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,.12)}
+      .oc-fcard .icon{font-size:2em;margin-bottom:12px}
+      .oc-fcard h3{margin:0 0 8px;font-size:1.1em}
+      .oc-fcard p{color:#666;font-size:.85em;line-height:1.5;margin:0 0 12px}
+      .oc-fcard a{color:#667eea;text-decoration:none;font-weight:600;font-size:.85em}
+      .oc-calendar{background:#fff;border-radius:16px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin:16px auto;max-width:400px}
+      .oc-calendar h2{text-align:center;font-size:1.1em;margin:0 0 12px}
+      .oc-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+      .oc-cal-h{font-weight:700;color:#667eea;font-size:.8em;padding:6px 0}
+      .oc-cal-d{padding:8px 4px;border-radius:8px;font-size:.8em;cursor:default}
+      .oc-cal-d.today{background:#667eea;color:#fff;font-weight:700}
+      @media(max-width:768px){.oc-features{grid-template-columns:1fr}}
+      [data-theme='dark'] .oc-fcard,[data-theme='dark'] .oc-calendar{background:rgba(255,255,255,.05)}
+      [data-theme='dark'] .oc-fcard p{color:rgba(255,255,255,.6)}
+      </style>
+    - |
+      <div class="oc-home-hero" id="ocHero">
+        <img class="oc-hero-avatar" src="/island-blog/images/燎原一叶.jpg" alt="毅哥" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=YiGe&backgroundColor=ff6b6b'">
+        <h1 class="oc-hero-title">毅哥和他的小伙伴们 🏝️</h1>
+        <p class="oc-hero-subtitle">记录生活中的灵感碎片 · 一起成长</p>
+        <div class="oc-quick-nav">
+          <a href="/island-blog/social/discover/"><i class="fas fa-compass"></i><span>发现</span></a>
+          <a href="/island-blog/members/"><i class="fas fa-users"></i><span>成员</span></a>
+          <a href="/island-blog/social/music/"><i class="fas fa-music"></i><span>音乐</span></a>
+          <a href="/island-blog/social/handwriting/"><i class="fas fa-pen-nib"></i><span>笔迹</span></a>
+          <a href="/island-blog/social/photo/"><i class="fas fa-image"></i><span>每日图</span></a>
+          <a href="/island-blog/social/news/"><i class="fas fa-fire"></i><span>热榜</span></a>
+          <a href="/island-blog/social/vote/"><i class="fas fa-poll"></i><span>投票</span></a>
+          <a href="/island-blog/about/"><i class="fas fa-heart"></i><span>关于</span></a>
+        </div>
+      </div>
+    - |
+      <div class="oc-features">
+        <div class="oc-fcard"><div class="icon">✍️</div><h3>笔迹分析</h3><p>上传笔迹图片，一键分析书写者的性格特征</p><a href="/island-blog/social/handwriting/">去看看 →</a></div>
+        <div class="oc-fcard"><div class="icon">🎵</div><h3>每日歌曲</h3><p>每天推荐一首好歌，用音乐治愈心灵</p><a href="/island-blog/social/music/">去听歌 →</a></div>
+        <div class="oc-fcard"><div class="icon">📸</div><h3>每日一图</h3><p>一张图，一个故事，记录生活中的美好瞬间</p><a href="/island-blog/social/photo/">看今日美图 →</a></div>
+        <div class="oc-fcard"><div class="icon">🗳️</div><h3>岛屿投票</h3><p>参与有趣的话题投票，看看大家怎么想</p><a href="/island-blog/social/vote/">去投票 →</a></div>
+        <div class="oc-fcard"><div class="icon">👥</div><h3>群友卡片</h3><p>认识岛上的每一位小伙伴</p><a href="/island-blog/members/">认识大家 →</a></div>
+        <div class="oc-fcard"><div class="icon">🔥</div><h3>岛屿热榜</h3><p>最热门的讨论和话题都在这里</p><a href="/island-blog/social/news/">去看看 →</a></div>
+      </div>
+    - |
+      <div class="oc-calendar" id="ocCal"><h2 id="ocCalTitle"></h2><div class="oc-cal-grid" id="ocCalGrid"></div></div>
+      <script>
+      (function(){
+        var p=location.pathname;
+        var isHome=p==='/'||p==='/island-blog/'||p==='/island-blog/index.html';
+        if(isHome){
+          var si=document.getElementById('site-info');
+          var hero=document.getElementById('ocHero');
+          if(si&&hero){hero.style.display='flex';si.appendChild(hero)}
+          var rp=document.getElementById('recent-posts');
+          var feat=document.querySelector('.oc-features');
+          var cal=document.getElementById('ocCal');
+          if(rp&&feat)rp.parentNode.insertBefore(feat,rp);
+          if(rp&&cal)rp.parentNode.insertBefore(cal,rp);
+        }
+        var now=new Date(),y=now.getFullYear(),m=now.getMonth(),d=now.getDate();
+        var mn=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+        var dh=['日','一','二','三','四','五','六'];
+        var t=document.getElementById('ocCalTitle');
+        if(t)t.textContent='📅 '+y+'年'+mn[m];
+        var g=document.getElementById('ocCalGrid'),i;
+        if(!g)return;
+        for(i=0;i<7;i++){var el=document.createElement('div');el.className='oc-cal-h';el.textContent=dh[i];g.appendChild(el)}
+        var fd=new Date(y,m,1).getDay(),dm=new Date(y,m+1,0).getDate();
+        for(i=0;i<fd;i++){g.appendChild(document.createElement('div')).className='oc-cal-d'}
+        for(i=1;i<=dm;i++){var c=document.createElement('div');c.className='oc-cal-d'+(i===d?' today':'');c.textContent=i;g.appendChild(c)}
+      })();
+      </script>
